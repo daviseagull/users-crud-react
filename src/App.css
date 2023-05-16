@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap");
 
 
-body {
+.userManagement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   height: 100vh;
+  width: 70%;
 }
 
 nav {
@@ -51,7 +55,7 @@ main h1 {
   width: 100%;
 }
 
-main header {
+.filters {
   padding: 0;
   display: flex;
   justify-items: center;
@@ -82,7 +86,7 @@ main header {
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
 
-header button {
+.filters button {
   background-color: #ed8975;
   border-radius: 4px;
   border: none;
@@ -127,6 +131,10 @@ button:hover {
   height: 24px;
 }
 
+.table {
+  height: 75%;
+}
+
 table {
   border-collapse: collapse;
   max-height: 80%;
@@ -169,4 +177,10 @@ tr:nth-child(even) {
 
 #actions button:hover {
   cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px;
 }

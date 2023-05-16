@@ -5,11 +5,11 @@ import Footer from "../components/Footer";
 
 export default function UserManagement() {
   return (
-    <body>
+    <div className="userManagement">
       <h1>User Management</h1>
       <Filters />
       <Table />
       <Footer />
-    </body>
+    </div>
   );
 }

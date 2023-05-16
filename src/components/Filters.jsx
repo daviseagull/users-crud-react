@@ -4,7 +4,7 @@ import UserPlusSvg from '../assets/user-plus.svg';
 
 export default function Filters() {
   return (
-    <header>
+    <div className="filters">
       <form class="filter-form">
         <div class="filter">
           <select class="rounded-input" name="status" id="lang">
@@ -38,6 +38,6 @@ export default function Filters() {
           Create <img src={UserPlusSvg}  alt=""/>
         </button>
       </aside>
-    </header>
+    </div>
   );
 }
