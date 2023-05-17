@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap");
 
 
-.userManagement {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100vh;
-  width: 70%;
-}
-
 main {
   display: flex;
   flex-direction: column;
