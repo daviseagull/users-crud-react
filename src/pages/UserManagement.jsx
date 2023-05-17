@@ -1,9 +1,22 @@
 import React from "react";
 import Filters from "../components/Filters";
 import Footer from "../components/Footer";
-import UserCard from "../components/user_card/UserCard";
+import UserList from "../components/user_list/UserList";
 
 export default function UserManagement() {
+  // const url = 'https://mack-webmobile.vercel.app/api/users'
+  
+  // const user_request = fetch(url, {
+  //   method: 'GET',
+  // })
+  //   .then(response => response.json())
+  //   .then(responseData => {
+  //     console.log('Resposta:', responseData);
+  //   })
+  //   .catch(error => {
+  //     console.log('Erro na requisição:', error);
+  //   });
+
   const users = [
     {
       "_id": "645861f71302d474ea43a2d4",
@@ -31,10 +44,7 @@ export default function UserManagement() {
     <div className="userManagement">
       <h1>User Management</h1>
       <Filters />
-      {/* {users.map((user) => (
-        <UserCard user={user} />
-      ))} */}
-      <UserCard user={users[0]} />
+      <UserList users={users}/>
       <Footer />
     </div>
   );
