@@ -1,9 +1,19 @@
-import './App.css';
-import UserManagement from './pages/UserManagement';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserManagement from "./pages/UserManagement/UserManagement";
+import UserForm from "./components/user_form/UserForm";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
-    <UserManagement/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<UserManagement />} />
+        <Route path="/user-form" element={<UserForm type='create' />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

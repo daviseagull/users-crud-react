@@ -1,8 +1,8 @@
 :root{
   --principal-text: #fff;
   --card-background-color: #fff;
-  --active-color: rgb(34, 225, 47);
-  --inactive-color: #ff3131;
+  --active-color: #8FB9AA;
+  --inactive-color: #ED8975;
 }
 
 .card {
@@ -24,6 +24,7 @@
 }
 
 #name {
+  color: black;
   font-weight: 700;
 }
 
