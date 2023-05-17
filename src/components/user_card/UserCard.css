@@ -1,0 +1,45 @@
+:root{
+  --principal-text: #fff;
+  --card-background-color: #fff;
+  --active-color: rgb(34, 225, 47);
+  --inactive-color: #ff3131;
+}
+
+.card {
+  background-color: var(--card-background-color);
+  width: 200px;
+  height: 280px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#avatar {
+  border-radius: 50%;
+  width: 180px;
+}
+
+#name {
+  font-weight: 700;
+}
+
+#state {
+  width: 70%;
+  height: 12%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--principal-text);
+}
+
+.state-active {
+  background-color: var(--active-color);
+}
+
+.state-inactive {
+  background-color: var(--inactive-color);
+}
