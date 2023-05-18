@@ -13,7 +13,7 @@ const UserForm = (type) => {
     <div id="user-form-page">
       <header>
         <Link className="link" to="/">
-          <img src={BackSvg} />
+          <img src={BackSvg} alt="" />
         </Link>
 
         {from === "create" ? <h1>Create user</h1> : <h1>Update user</h1>}
