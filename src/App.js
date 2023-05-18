@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserManagement from "./pages/UserManagement/UserManagement";
 import UserForm from "./pages/UserForm/UserForm";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 
 
 function App() {

@@ -1,70 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap");
 
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 94%;
   width: 80%;
-}
-
-main h1 {
-  margin: 0px;
-  padding: 24px 0;
-  width: 100%;
-}
-
-.table {
-  height: 75%;
-}
-
-table {
-  border-collapse: collapse;
-  max-height: 80%;
-  width: 100%;
-}
-
-table th {
-  height: 32px;
-  padding-left: 12px;
-  background-color: #304d63;
-  color: white;
-  border: none;
-  text-align: start;
-}
-
-table td {
-  height: 32px;
-  padding-left: 12px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#actions {
-  display: flex;
-  width: 100%;
-  gap: 12%;
-  justify-content: start;
-}
-
-#actions img {
-  height: 22px;
-}
-
-#actions button {
-  background-color: transparent;
-  border: none;
-}
-
-#actions button:hover {
-  cursor: pointer;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 20px 20px;
 }
