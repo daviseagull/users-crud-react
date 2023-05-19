@@ -25,7 +25,7 @@ code {
 #root {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--background-color);
   min-height: 100vh;
