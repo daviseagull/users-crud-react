@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap");
+
 :root{
   --background-color: #e9e9e9;
+  --principal-text: #fff;
+  --card-background-color: #fff;
+  --active-color: #8FB9AA;
+  --inactive-color: #ED8975;
 }
 
 body {

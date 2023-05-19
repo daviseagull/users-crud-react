@@ -1,6 +1,6 @@
 import React from "react";
 import './UserList.css';
-import UserCard from "../user_card/UserCard";
+import UserCard from "../UserCard/UserCard";
 
 export default function UserList({ users }) {
   return (

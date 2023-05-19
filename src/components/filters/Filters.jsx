@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-
-import "./Filters.css";
 import SearchSvg from "../../assets/search.svg";
 import UserPlusSvg from "../../assets/user-plus.svg";
+import "./Filters.css";
 
 export default function Filters() {
   return (

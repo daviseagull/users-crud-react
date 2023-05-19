@@ -1,10 +1,3 @@
-:root{
-  --principal-text: #fff;
-  --card-background-color: #fff;
-  --active-color: #8FB9AA;
-  --inactive-color: #ED8975;
-}
-
 .card {
   background-color: var(--card-background-color);
   width: 200px;
