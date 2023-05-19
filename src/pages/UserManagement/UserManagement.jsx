@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import "./UserManagement.css";
 import Filters from "../../components/Filters/Filters";
 import UserList from "../../components/UserList/UserList";
+import "./UserManagement.css";
 
 export default function UserManagement() {
   const [users, setUsers] = useState([]);
@@ -16,7 +16,7 @@ export default function UserManagement() {
   }, [])
 
   return (
-    <div className="userManagement">
+    <div className="user-management">
       <header >
         <h1>User Management</h1>
         <Filters />
