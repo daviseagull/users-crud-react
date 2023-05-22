@@ -19,7 +19,7 @@ const UserDeleted = () => {
       <h1>User Deleted</h1>
       <Link className="link" to="/">
         <img src={BackSvg} alt="" />
-        <p>Voltar para home</p>
+        <p>Return to home</p>
       </Link>
     </div>
   );

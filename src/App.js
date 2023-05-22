@@ -5,14 +5,14 @@ import UserDetails from "./pages/UserDetails/UserDetails";
 import UserDeleted from "./pages/UserDeleted/UserDeleted";
 import Footer from "./components/Footer/Footer";
 
-
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<UserManagement />} />
-        <Route path="/user-form" element={<UserForm type='create' />} />
+        <Route path="/user-form" element={<UserForm type="create" />} />
         <Route path="/user/:id" element={<UserDetails />} />
+        <Route path="/user/:id/edit" element={<UserForm type="edit" />} />
         <Route path="/user/:id/deleted" element={<UserDeleted />} />
       </Routes>
       <Footer />

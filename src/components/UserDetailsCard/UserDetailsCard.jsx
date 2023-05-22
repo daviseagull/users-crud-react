@@ -11,7 +11,9 @@ export default function UserCardDetails({ user }) {
   return (
   <div className="card-details">
     <div className="card-details-top-bar">
+      <Link className="link" to={`/user/${user._id}/edit`} state={{ from: "edit" }}>
       <img id="card-details-top-bar-edit" src={EditSvg} alt="" />
+      </Link>
       <Link className="link" to={`/user/${user._id}/deleted`}>
         <img id="card-details-top-bar-trash" src={TrashSvg} alt=""/>
       </Link>

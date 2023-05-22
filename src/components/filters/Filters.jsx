@@ -10,8 +10,8 @@ export default function Filters() {
       <form class="filter-form">
         <div class="filter">
           <select class="rounded-input" name="status" id="lang">
-            <option value="true">Ativo</option>
-            <option value="false">Inativo</option>
+            <option value="true">Active</option>
+            <option value="false">Inactive</option>
           </select>
         </div>
         <div class="filter">

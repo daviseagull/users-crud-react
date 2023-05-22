@@ -31,3 +31,13 @@ code {
   background-color: var(--background-color);
   min-height: 100vh;
 }
+
+.link {
+  justify-content: space-around;
+  margin: 4px;
+  gap: 8px;
+  display: flex;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+}

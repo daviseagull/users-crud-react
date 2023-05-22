@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link, useLocation } from "react-router-dom";
 import "./UserForm.css";
 import CancelSvg from "../../assets/error.svg";
 import CheckSvg from "../../assets/check.svg";
@@ -8,6 +9,19 @@ import BackSvg from "../../assets/back.svg";
 const UserForm = (type) => {
   const location = useLocation();
   const { from } = location.state;
+  const { id } = useParams();
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        `https://mack-webmobile.vercel.app/api/users/${id}`
+      );
+      const user = await response.json();
+      setUser(user);
+    };
+    fetchData();
+  }, [id]);
 
   return (
     <div id="user-form-page">
@@ -25,24 +39,41 @@ const UserForm = (type) => {
             <input
               className="input-text"
               type="text"
-              placeholder="First name"
+              placeholder="Name"
+              value={user.name}
             />
-            <input className="input-text" type="email" placeholder="Email" />
-            <input className="input-date" type="date" />
+            <input
+              className="input-text"
+              type="email"
+              placeholder="Email"
+              value={user.email}
+            />
+            <input className="input-date" type="date" value={user.date} />
           </section>
           <section className="column">
-            <input className="input-text" type="text" placeholder="Last name" />
-            <input className="input-text" type="number" placeholder="Salary" />
-            <select className="input-select" name="status" id="lang">
-              <option value="true">Ativo</option>
-              <option value="false">Inativo</option>
+            <input
+              className="input-text"
+              type="number"
+              placeholder="Salary"
+              value={user.salary}
+            />
+            <select
+              className="input-select"
+              name="status"
+              id="lang"
+              value={user.status}
+            >
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
             </select>
           </section>
         </div>
         <div className="form-buttons">
+          <Link className="link" to={`/`}>
           <button id="cancel">
             Cancel <img src={CancelSvg} alt="" />
           </button>
+          </Link>
           <button id="confirm">
             Confirm <img src={CheckSvg} alt="" />
           </button>

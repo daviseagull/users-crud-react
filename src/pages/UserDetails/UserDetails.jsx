@@ -16,6 +16,7 @@ const UserDetails = () => {
     }
     fetchData()
   }, [id])
+  
   return (
     <div id="user-details">
       <header className="user-details-header">
