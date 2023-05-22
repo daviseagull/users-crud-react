@@ -2,15 +2,19 @@ import React from "react";
 import "./UserDetailsCard.css";
 import TrashSvg from "../../assets/trash.svg";
 import EditSvg from "../../assets/edit.svg";
+import { Link } from "react-router-dom";
 
 export default function UserCardDetails({ user }) {
   const user_state =
     user.status === "Active" ? "state-active" : "state-inactive";
+
   return (
   <div className="card-details">
     <div className="card-details-top-bar">
-      <img src={EditSvg} alt="" />
-      <img src={TrashSvg} alt="" />
+      <img id="card-details-top-bar-edit" src={EditSvg} alt="" />
+      <Link className="link" to={`/user/${user._id}/deleted`}>
+        <img id="card-details-top-bar-trash" src={TrashSvg} alt=""/>
+      </Link>
     </div>
     <main className="card-details-user">
       <img id="card-details-avatar" src={user.avatar} alt="user avatar" />
