@@ -3,20 +3,23 @@ import { useParams, Link } from "react-router-dom";
 import "./UserDetails.css";
 import BackSvg from "../../assets/back.svg";
 import UserDetailsCard from "../../components/UserDetailsCard/UserDetailsCard";
+import { readUser } from "../../api/service";
+
 
 const UserDetails = () => {
   const { id } = useParams();
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(`https://mack-webmobile.vercel.app/api/users/${id}`);
-      const user = await response.json();
-      setUser(user);
-    }
-    fetchData()
+    read();
   }, [id])
   
+
+  const read = async () => {
+    const user = await readUser(id);
+    setUser(user);
+  };
+
   return (
     <div id="user-details">
       <header className="user-details-header">
