@@ -2,18 +2,21 @@ import { useState, useEffect } from "react";
 import Filters from "../../components/Filters/Filters";
 import UserList from "../../components/UserList/UserList";
 import "./UserManagement.css";
+import { readUsers } from "../../api/service";
 
 export default function UserManagement() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("https://mack-webmobile.vercel.app/api/users");
-      const users = await response.json();
-      setUsers(users);
-    }
-    fetchData()
+    read();
   }, [])
+
+
+  const read = async () => {
+    const users = await readUsers();
+    setUsers(users);
+    console.table(users)
+  };
 
   return (
     <div className="user-management">
