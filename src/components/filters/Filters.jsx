@@ -4,14 +4,21 @@ import SearchSvg from "../../assets/search.svg";
 import UserPlusSvg from "../../assets/user-plus.svg";
 import "./Filters.css";
 
-export default function Filters() {
+export default function Filters({statusHandler}) {
+
+  const filterStatus = (e) => {
+    console.log(e)
+    statusHandler('Active')
+  };
+  
   return (
     <div className="filters">
       <form class="filter-form">
         <div class="filter">
           <select class="rounded-input" name="status" id="lang">
-            <option value="true">Active</option>
-            <option value="false">Inactive</option>
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
           </select>
         </div>
         <div class="filter">
@@ -25,8 +32,8 @@ export default function Filters() {
             id="register_date"
           />
         </div>
-        <button className="btn" id="search" type="submit">
-          <img src={SearchSvg} alt="" />
+        <button className="btn" id="search" type="submit" onClick={filterStatus}>
+          <img src={SearchSvg} alt=""/>
         </button>
       </form>
       <aside>

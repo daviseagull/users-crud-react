@@ -1,11 +1,27 @@
 const BASE_URL = "https://mack-webmobile.vercel.app/api/users";
 const AVATAR_BASE_URL = "https://randomuser.me/api/portraits";
 
-export async function readUsers() {
+export function filterUsers(users, filters) {
+  let filteredUsers = users
+  if (filters.status) {
+    filteredUsers = users.filter(user => user.status === filters.status)
+  }
+  if (filters.name) {
+    filteredUsers = users.filter(user => user.name === filters.name)
+  }
+  if (filters.date) {
+    filteredUsers = users.filter(user => user.date >= filters.date)
+  }
+
+  return filteredUsers;
+}
+
+export async function readUsers(filters) {
   try {
     const response = await fetch(BASE_URL);
     const users = await response.json();
-    return users;
+    const filteredUsers = filterUsers(users, filters)
+    return filteredUsers;
   } catch (err) {
     console.error(err);
   }

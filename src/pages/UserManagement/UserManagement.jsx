@@ -6,23 +6,23 @@ import { readUsers } from "../../api/service";
 
 export default function UserManagement() {
   const [users, setUsers] = useState([]);
+  const [filterStatus, setFilterStatus] = useState(null);
+
+  const read = async () => {
+    const users = await readUsers({status: filterStatus});
+    setUsers(users, {status: filterStatus});
+    console.table(users)
+  };
 
   useEffect(() => {
     read();
   }, [])
 
-
-  const read = async () => {
-    const users = await readUsers();
-    setUsers(users);
-    console.table(users)
-  };
-
   return (
     <div className="user-management">
       <header >
         <h1>User Management</h1>
-        <Filters />
+        <Filters statusHandler={setFilterStatus}/>
       </header>
       <UserList users={users} />
     </div>
