@@ -10,7 +10,7 @@ export default function Filters({statusHandler}) {
   const [name, setName] = useState('');
   const [registerDate, setRegisterDate] = useState('');
 
-  const filterStatus = (e) => {
+  const filterStatus = () => {
     statusHandler({status: status,
                   name: name,
                   date: registerDate})
@@ -23,7 +23,7 @@ export default function Filters({statusHandler}) {
           <select class="rounded-input" 
                   name="status" 
                   id="lang"
-                  onChange={(e) => { (e.target.value == "All") ? setStatus(null) : setStatus(e.target.value) }}>
+                  onChange={(e) => { (e.target.value === "All") ? setStatus(null) : setStatus(e.target.value) }}>
             <option value="All">All</option>
             <option value="Active">Active</option>
             <option value="Inactive">Inactive</option>
