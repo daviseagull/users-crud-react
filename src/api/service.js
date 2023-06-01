@@ -3,25 +3,26 @@ const AVATAR_BASE_URL = "https://randomuser.me/api/portraits";
 
 export function filterUsers(users, filters) {
   let filteredUsers = users
+
   if (filters.status) {
-    filteredUsers = users.filter(user => user.status === filters.status)
+    console.log("eita:" + filters.status)
+    filteredUsers = filteredUsers.filter(user => user.status === filters.status)
   }
   if (filters.name) {
-    filteredUsers = users.filter(user => user.name === filters.name)
+    filteredUsers = filteredUsers.filter(user => user.name.includes(filters.name) )
   }
   if (filters.date) {
-    filteredUsers = users.filter(user => user.date >= filters.date)
+    filteredUsers = filteredUsers.filter(user => user.date >= filters.date)
   }
 
   return filteredUsers;
 }
 
-export async function readUsers(filters) {
+export async function readUsers() {
   try {
     const response = await fetch(BASE_URL);
     const users = await response.json();
-    const filteredUsers = filterUsers(users, filters)
-    return filteredUsers;
+    return users;
   } catch (err) {
     console.error(err);
   }
@@ -57,10 +58,9 @@ const getWomenAvatar = (num) => {
 export async function createUser(name, salary, email, status, date) {
   try {
     const avatar = getAvatar();
-    // const date = setDatePattern(oldDate);
+
     console.log(avatar);
-
-
+    
     const user = { name, salary, email, status, date, avatar};
 
     console.table(user);
