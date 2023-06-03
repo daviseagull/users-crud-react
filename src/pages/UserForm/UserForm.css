@@ -13,56 +13,44 @@
   width: 100%;
 }
 
-.link img {
-  height: 36px;
-}
-
 .user-form {
   display: flex;
   flex-direction: column;
-  height: 70%;
-  width: 100%;
-  gap: 12px;
-  margin-bottom: 32px;
-}
-
-.column {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .fields {
   display: flex;
-  width: 100%;
-  gap: 100px;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-input {
-  padding: 10px;
-  border: 0;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+.column {
+  flex-basis: 45%;
 }
 
-select {
-  padding: 10px;
-  border: 0;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-}
-
+.input-text,
+.input-select,
 .input-date {
-  width: 200px;
-}
-
-.input-select {
-  width: 100px;
-}
-
-.input-text {
   width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
 }
 
 button {
@@ -79,26 +67,28 @@ button {
   height: 36px;
 }
 
+#cancel,
+#confirm {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
 #cancel {
   background-color: #ed8975;
 }
 
-#confirm {
-  background-color: #8fb9aa;
+#cancel:hover {
+  background-color: #b86656;
 }
 
-button img {
-  align-items: center;
-  height: 24px;
+#confirm {
+  background-color: #8fb9aa;
+  color: #fff;
 }
 
 #confirm:hover {
   background-color: #68897e;
-}
-
-.form-buttons {
-  margin-top: 10%;
-  display: flex;
-  gap: 12px;
-  justify-content: flex-end;
 }
