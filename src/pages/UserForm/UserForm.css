@@ -5,11 +5,12 @@
   justify-content: start;
 }
 
-header {
+.user-form-header {
   display: flex;
   justify-content: start;
   flex-direction: row;
   height: 25%;
+  width: 100%;
 }
 
 .link img {

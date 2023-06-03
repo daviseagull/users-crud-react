@@ -76,12 +76,13 @@ const UserForm = (type) => {
 
   return (
     <div id="user-form-page">
-      <header>
+      <header id="user-form-header">
         <Link className="link" to="/">
           <img src={BackSvg} alt="" />
+          {from === "create" ? <h1>Create user</h1> : <h1>Update user</h1>}
+
         </Link>
 
-        {from === "create" ? <h1>Create user</h1> : <h1>Update user</h1>}
       </header>
 
       <div className="user-form">

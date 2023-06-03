@@ -10,4 +10,6 @@
 .user-details-header {
   width: 100%;
   margin-top: 40px;
+  display: flex;
+  gap: 12px;
 }

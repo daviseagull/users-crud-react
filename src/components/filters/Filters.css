@@ -1,31 +1,19 @@
 .filters {
-  padding: 0;
+  justify-content: center;
   display: flex;
-  justify-items: center;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 16%;
-}
-
-.filter-form {
-  height: 40%;
-  width: 80%;
-  justify-content: start;
-  align-items: center;
-  display: flex;
-  gap: 12px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .filter {
   display: flex;
   flex-direction: column;
+  min-width: 120px;
+  max-height: 200px;
 }
 
 .rounded-input {
-  padding: 10px;
-  width: 140px;
-  border: 0;
+  border-radius: 5px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
@@ -45,31 +33,11 @@
 }
 
 #search {
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
-  width: 32px;
 }
 
 #search img {
-  height: 24px;
-}
-
-#open-form {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 36px;
-  text-align: center;
-  font-size: 16px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-#open-form img {
-  align-items: center;
   height: 24px;
 }

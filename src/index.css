@@ -33,9 +33,8 @@ code {
 }
 
 .link {
-  justify-content: space-around;
   margin: 4px;
-  gap: 8px;
+  gap: 12px;
   display: flex;
   color: white;
   text-decoration: none;
