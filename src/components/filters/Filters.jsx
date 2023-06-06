@@ -15,20 +15,20 @@ export default function Filters({statusHandler}) {
 
   return (
     <section className="filters">
-      <div class="filter">
-        <select class="rounded-input" name="status" 
+      <div className="filter">
+        <select className="rounded-input" name="status" 
                 onChange={(e) => { (e.target.value === "All") ? setStatus(null) : setStatus(e.target.value) }}>
           <option value="All">All</option>
           <option value="Active">Active</option>
           <option value="Inactive">Inactive</option>
         </select>
       </div>
-      <div class="filter">
-        <input class="rounded-input" type="text" placeholder="Nome" value={name}
+      <div className="filter">
+        <input className="rounded-input" type="text" placeholder="Nome" value={name}
                onChange={(e) => {setName(e.target.value)}}/>
       </div>
-      <div class="filter">
-        <input class="rounded-input" type="date" name="register_date" id="register_date" value={registerDate}
+      <div className="filter">
+        <input className="rounded-input" type="date" name="register_date" id="register_date" value={registerDate}
                onChange={(e) => {setRegisterDate(e.target.value)}}/>
       </div>
       <button className="btn" id="search" onClick={filterStatus}>
